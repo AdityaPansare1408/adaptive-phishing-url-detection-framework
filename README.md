@@ -1,30 +1,58 @@
 # Adaptive Phishing URL Detection Framework
 
+An intelligent phishing URL detection system that combines **Machine Learning**, **Deception Analysis**, **Intent Analysis**, and an **Adaptive Trust-Aware Fusion Engine** to identify sophisticated phishing attacks beyond traditional URL classifiers.
+
+Traditional phishing detection systems rely heavily on machine learning predictions alone. This project introduces a multi-layered security intelligence framework that evaluates URLs using independent security signals and dynamically adapts trust allocation based on detected attack characteristics.
+
+---
+
+## Project Highlights
+
+* Trained on **1.49 Million URLs**
+* **XGBoost-based** phishing detection model
+* **98.96% Accuracy** on the test dataset
+* **18 Engineered URL Security Features**
+* Advanced **Deception Analysis Engine**
+* Phishing-oriented **Intent Analysis Engine**
+* Adaptive **Trust-Aware Risk Fusion Framework**
+* Interactive **Streamlit Web Application**
+* Explainable phishing risk assessment
+
+---
+
 ## Overview
 
-Phishing attacks have evolved beyond simple malicious URLs and increasingly rely on domain spoofing, character substitution, homograph attacks, deceptive branding, and phishing-oriented intent signals to bypass traditional security mechanisms.
+Phishing attacks have evolved far beyond simple malicious URLs and increasingly employ techniques such as:
 
-This project presents an Adaptive Phishing URL Detection Framework that combines Machine Learning with Multi-Level Security Intelligence to improve detection of sophisticated phishing attacks.
+* Domain spoofing
+* Character substitution
+* Homograph attacks
+* Deceptive branding
+* Unicode manipulation
+* Phishing-oriented intent signals
 
-Unlike conventional URL classifiers that rely solely on machine learning predictions, this framework integrates:
+These techniques often bypass traditional URL classification systems.
 
-* Machine Learning Detection Layer
-* Deception Analysis Layer
-* Intent Analysis Layer
-* Adaptive Trust-Aware Fusion Framework
-* Risk Assessment and Explanation Layer
+This framework addresses the problem by integrating multiple security intelligence layers:
 
-The system analyzes URLs using multiple independent security signals and dynamically adapts trust allocation based on the detected attack profile.
+1. Machine Learning Detection Layer
+2. Deception Analysis Layer
+3. Intent Analysis Layer
+4. Adaptive Trust-Aware Fusion Framework
+5. Risk Assessment and Explanation Layer
+
+The system evaluates URLs using independent risk signals and combines them into a unified phishing risk score for more robust detection.
 
 ---
 
 ## Key Features
 
-### Machine Learning Detection
+### Machine Learning Detection Layer
 
-* XGBoost-based phishing URL classification
+* XGBoost-based phishing URL classifier
 * Trained on approximately 1.49 million URLs
 * Uses 18 engineered lexical, structural, statistical, and security-related features
+* Generates phishing probability scores
 
 ### Deception Analysis Engine
 
@@ -43,10 +71,10 @@ Identifies phishing-oriented intent through:
 
 * Suspicious keyword detection
 * Risk-based keyword scoring
-* Nonlinear intent escalation
 * Multi-keyword threat assessment
+* Nonlinear intent escalation
 
-### Adaptive Trust-Aware Fusion
+### Adaptive Trust-Aware Fusion Framework
 
 Combines:
 
@@ -56,7 +84,7 @@ Combines:
 
 into a unified phishing risk score.
 
-The framework includes:
+The framework incorporates:
 
 * Dynamic profile switching
 * Agreement boosting
@@ -70,31 +98,35 @@ Provides:
 
 * Final classification result
 * Risk level indication
-* Key phishing indicators
 * Detection explanations
 * URL summary information
+* Key phishing indicators
 
 ---
 
 ## Dataset
 
-The machine learning model was trained using a large-scale URL dataset compiled from multiple sources:
+The machine learning model was trained using a large-scale URL dataset compiled from multiple sources.
+
+### Data Sources
 
 * PhishTank
 * Tranco
 * Additional Benign URL Sources
 
-Dataset Statistics:
+### Dataset Statistics
 
-* Total URLs: 1,489,337
-* Training Samples: 1,191,469
-* Testing Samples: 297,868
+| Metric           | Value     |
+| ---------------- | --------- |
+| Total URLs       | 1,489,337 |
+| Training Samples | 1,191,469 |
+| Testing Samples  | 297,868   |
 
 ---
 
 ## Engineered Feature Set
 
-The framework extracts 18 handcrafted URL features grouped into:
+The framework extracts 18 handcrafted URL features categorized into four groups.
 
 ### Lexical Features
 
@@ -122,9 +154,51 @@ The framework extracts 18 handcrafted URL features grouped into:
 
 ---
 
+## How It Works
+
+1. User submits a URL through the Streamlit interface.
+2. The Feature Extraction Module generates 18 security-related features.
+3. The XGBoost model predicts phishing probability.
+4. The Deception Analysis Engine evaluates manipulation patterns.
+5. The Intent Analysis Engine assesses phishing-oriented intent signals.
+6. The Adaptive Trust-Aware Fusion Framework combines multiple risk signals.
+7. The Risk Assessment Layer generates the final classification and explanation.
+
+---
+
 ## System Architecture
 
 ![System Architecture](docs/architecture.png)
+
+---
+
+## Repository Structure
+
+```text
+adaptive-phishing-url-detection-framework
+│
+├── docs/
+│   └── architecture.png
+│
+├── models/
+│   ├── xgb_model.pkl
+│   └── probability_calibrator.pkl
+│
+├── screenshots/
+│   ├── home_page.png
+│   ├── phishing_url_result.png
+│   └── legitimate_url_result.png
+│
+├── src/
+│   ├── streamlit_app.py
+│   ├── feature_extraction.py
+│   ├── deception_analysis_engine.py
+│   └── intent_analysis_engine.py
+│
+├── requirements.txt
+├── LICENSE
+└── README.md
+```
 
 ---
 
@@ -146,7 +220,7 @@ The framework extracts 18 handcrafted URL features grouped into:
 
 ## Performance
 
-Experimental evaluation achieved:
+Performance results were obtained using the XGBoost phishing detection model on the held-out test dataset.
 
 | Metric    | Value  |
 | --------- | ------ |
@@ -159,31 +233,51 @@ Experimental evaluation achieved:
 
 ## Technology Stack
 
+### Programming Language
+
 * Python
+
+### Machine Learning
+
 * XGBoost
 * Scikit-Learn
+
+### Data Processing
+
 * Pandas
 * NumPy
-* Streamlit
+
+### URL Analysis
+
 * tldextract
+
+### Web Application
+
+* Streamlit
 
 ---
 
 ## Installation
 
-Clone the repository:
+### Clone Repository
 
 ```bash
 git clone https://github.com/AdityaPansare1408/adaptive-phishing-url-detection-framework.git
 ```
 
-Install dependencies:
+### Navigate to Project Directory
+
+```bash
+cd adaptive-phishing-url-detection-framework
+```
+
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the application:
+### Run Application
 
 ```bash
 streamlit run src/streamlit_app.py
@@ -196,14 +290,30 @@ streamlit run src/streamlit_app.py
 * Browser extension deployment
 * Real-time domain reputation lookup
 * Threat intelligence integration
-* Deep learning based URL analysis
+* Deep learning-based URL analysis
 * Cloud deployment
+* Real-time URL monitoring
+* Explainable AI integration for prediction transparency
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+See the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## Author
 
-Aditya Pansare
+**Aditya Pansare**
 
 M.Tech Computer Engineering
 Pune Institute of Computer Technology (PICT)
+
+---
+
+## Keywords
+
+Cybersecurity • Phishing Detection • URL Classification • Machine Learning • XGBoost • Streamlit • Threat Detection • Trust-Aware Security • Deception Analysis • Intent Analysis
