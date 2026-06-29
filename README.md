@@ -321,9 +321,3 @@ See the [LICENSE](LICENSE) file for details.
 
 M.Tech Computer Engineering
 Pune Institute of Computer Technology (PICT)
-
----
-
-## Keywords
-
-Cybersecurity • Phishing Detection • URL Classification • Machine Learning • XGBoost • Streamlit • Threat Detection • Trust-Aware Security • Deception Analysis • Intent Analysis
