@@ -307,17 +307,17 @@ streamlit run src/streamlit_app.py
 
 ---
 
-## License
-
-This project is licensed under the MIT License.
-
-See the [LICENSE](LICENSE) file for details.
-
----
-
 ## Author
 
 **Aditya Pansare**
 
 M.Tech Computer Engineering
 Pune Institute of Computer Technology (PICT)
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+See the [LICENSE](LICENSE) file for details.
