@@ -1,5 +1,10 @@
 # Adaptive Phishing URL Detection Framework
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![XGBoost](https://img.shields.io/badge/XGBoost-ML-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 An intelligent phishing URL detection system that combines **Machine Learning**, **Deception Analysis**, **Intent Analysis**, and an **Adaptive Trust-Aware Fusion Engine** to identify sophisticated phishing attacks beyond traditional URL classifiers.
 
 Traditional phishing detection systems rely heavily on machine learning predictions alone. This project introduces a multi-layered security intelligence framework that evaluates URLs using independent security signals and dynamically adapts trust allocation based on detected attack characteristics.
@@ -220,7 +225,7 @@ adaptive-phishing-url-detection-framework
 
 ## Performance
 
-Performance results were obtained using the XGBoost phishing detection model on the held-out test dataset.
+Performance results were obtained using the XGBoost phishing detection model on the held-out test dataset containing approximately 297,000 URLs.
 
 | Metric    | Value  |
 | --------- | ------ |
@@ -254,6 +259,11 @@ Performance results were obtained using the XGBoost phishing detection model on 
 ### Web Application
 
 * Streamlit
+
+### Development Tools
+
+* Git
+* GitHub
 
 ---
 
